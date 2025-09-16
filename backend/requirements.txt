@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+pydantic
+SQLAlchemy>=1.4
+python-dotenv
+pillow
+torch
+torchvision
+faiss-cpu
+numpy
+orjson
+requests
+aiofiles
+python-multipart
