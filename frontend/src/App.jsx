@@ -8,6 +8,8 @@ import ImageUpload from "./components/ImageUpload";
 import SearchResults from "./components/SearchResults";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import DressGallery from "./components/DressGallery";
 
 function App() {
   const [file, setFile] = useState(null);
@@ -34,14 +36,17 @@ function App() {
 
   return (
     <div className="min-h-screen bg-peach flex flex-col items-center justify-center  p-6">
-      <div className="w-full max-w-7xl flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
         {/* <DynamicBg /> */}
         <Navbar />
         <Header />
+        
         <ImageUpload file={file} setFile={setFile} onSearch={handleSearch} loading={loading} />
         <SearchResults results={results} />
+        <DressGallery />
         <About />
         <Contact />
+        <Footer />
       </div>
     </div>
   );

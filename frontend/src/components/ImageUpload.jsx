@@ -24,7 +24,7 @@ function ImageUpload({ file, setFile, onSearch, loading }) {
           "Searching..."
         ) : (
           <>
-            <Upload className="mr-2" size={18} /> Search
+            <Upload className="mr-2" size={18} /> Search 
           </>
         )}
       </button>

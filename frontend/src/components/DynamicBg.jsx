@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from "react";
-
 function DynamicBg() {
   const waveRef = useRef(null);
-
   useEffect(() => {
     const handleMouseMove = (e) => {
       if (waveRef.current) {
@@ -15,7 +13,6 @@ function DynamicBg() {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
-
   return (
     <div
       ref={waveRef}
@@ -28,5 +25,4 @@ function DynamicBg() {
     />
   );
 }
-
 export default DynamicBg;
