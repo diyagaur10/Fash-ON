@@ -1,13 +1,13 @@
 import React from "react";
 
 const images = [
-  // Replace these URLs with your own dress images or use Unsplash/placeholder links
-  "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1469398715555-76331a6c7c9b?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80",
-  "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80"
+  // Use relative paths from the public folder for local images
+  "/assets/gallary_images/0e54af90dcf0f9a2b05f5f32f3dc869f.webp",
+  "/assets/gallary_images/1adef7abe45fb32c8ece1a3abfefb1ca.webp",
+  "/assets/gallary_images/06d108ca9a9eac71.jpg",
+  "/assets/gallary_images/068eb67f78c4973f5e968c7aec2863ef.webp",
+  "/assets/gallary_images/74b481f36fff6d17a0e5f19c7a3e7c47.webp",
+  "/assets/gallary_images/0620ec1971b2f92c9d831f2d4c00c4a0.webp"
 ];
 
 function DressGallery() {
