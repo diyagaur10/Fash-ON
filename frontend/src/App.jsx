@@ -23,7 +23,7 @@ function App() {
     formData.append("file", file);
     formData.append("top_k", 12);
     try {
-      const res = await axios.post("http://127.0.0.1:8000/search/image", formData, {
+      const res = await axios.post(`/api/search/image`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setResults(res.data);
