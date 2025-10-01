@@ -1,11 +1,14 @@
---extra-index-url https://download.pytorch.org/whl/cpu
 fastapi
-uvicorn
-python-multipart
-Pillow
+uvicorn[standard]
+pydantic
+SQLAlchemy>=1.4
+python-dotenv
+pillow
 torch
 torchvision
-SQLAlchemy
-psycopg2-binary
-numpy
 faiss-cpu
+numpy
+orjson
+requests
+aiofiles
+python-multipart
