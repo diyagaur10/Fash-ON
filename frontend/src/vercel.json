@@ -2,17 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/index.py",
-      "use": "@vercel/python"
+      "src": "api/index.py",      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "memory": 1024 }
     },
     {
       "src": "frontend/package.json",
       "use": "@vercel/node",
-      "config": { "installCommand": "npm install" }
+      "config": { "installCommand": "npm install", "zeroConfig": true }
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/frontend/$1" },
-    { "src": "/search/image", "dest": "/api/index.py" }
+    {
+      "src": "/search/image",
+      "dest": "/api/index.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/$1"
+    }
   ]
 }
