@@ -24,8 +24,8 @@ function App() {
     formData.append("top_k", 12);
     try {
       // Use an environment variable for the API URL
-      const apiUrl = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
-
+      // For production on Vercel, an empty string makes the request relative to the domain.
+      const apiUrl = import.meta.env.VITE_API_URL || "";
       const res = await axios.post(`${apiUrl}/search/image`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
