@@ -23,7 +23,10 @@ function App() {
     formData.append("file", file);
     formData.append("top_k", 12);
     try {
-      const res = await axios.post("http://127.0.0.1:8000/search/image", formData, { //fixed backend error
+      // Use an environment variable for the API URL
+      const apiUrl = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
+      const res = await axios.post(`${apiUrl}/search/image`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setResults(res.data);
